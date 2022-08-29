@@ -15,5 +15,7 @@ public interface SchoolRepository extends JpaRepository<School, Long> {
     @Query("SELECT DISTINCT(city) FROM School")
     List<String> getCities();
 
+    List<School> findAllByCity(String city);
+
 
 }

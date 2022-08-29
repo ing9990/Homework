@@ -7,6 +7,7 @@ package com.schoolproject.user.service;
 
 import com.schoolproject.user.domain.School;
 import com.schoolproject.user.repository.SchoolRepository;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -29,9 +30,20 @@ public class SchoolService {
         return schoolRepository.save(school);
     }
 
+    public Optional<School> updateName(Long schoolId, String name) {
+        return schoolRepository.findById(schoolId).map(school -> {
+            school.setName(name);
+            return schoolRepository.save(school);
+        });
+    }
+
 
     public List<String> cities() {
         return schoolRepository.getCities();
+    }
+
+    public List<School> findAllByCity(String city) {
+        return schoolRepository.findAllByCity(city);
     }
 
 }
