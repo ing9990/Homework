@@ -42,9 +42,7 @@ class SchoolTest {
     @Test
     void test_1() {
         var school = this.schoolTestHelper.createSchool("테스트 학교", "서울");
-
         schoolService.save(school);
-
         var list = schoolRepository.findAll();
         assertEquals(1, list.size());
         SchoolTestHelper.assertSchool(list.get(0), "테스트 학교", "서울");
