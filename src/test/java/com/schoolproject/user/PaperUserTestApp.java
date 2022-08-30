@@ -16,7 +16,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import java.util.*;
 
 @SpringBootApplication
-
 public class PaperUserTestApp {
 
     public static void main(String[] args) {

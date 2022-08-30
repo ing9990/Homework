@@ -41,7 +41,6 @@ class SchoolTest {
     @DisplayName("1. 학교 생성하기")
     @Test
     void test_1() {
-        var school = this.schoolTestHelper.createSchool("테스트 학교", "서울");
         schoolService.save(school);
         var list = schoolRepository.findAll();
         assertEquals(1, list.size());
