@@ -5,20 +5,17 @@ package com.schoolproject.user.domain;
  */
 
 
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 
 import java.util.*;
-
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
 
+@EqualsAndHashCode
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -30,6 +27,11 @@ public class Authority implements GrantedAuthority {
 
     public static final String ROLE_TEACHER = "ROLE_TEACHER";
     public static final String ROLE_STUDENT = "ROLE_STUDENT";
+    public static final String ROLE_ADMIN = "ROLE_ADMIN";
+
+    public static final Authority ADMIN_AUTHORITY = Authority.builder().authority(ROLE_ADMIN).build();
+    public static final Authority TEACHER_AUTHORITY = Authority.builder().authority(ROLE_TEACHER).build();
+    public static final Authority STUDENT_AUTHORITY = Authority.builder().authority(ROLE_STUDENT).build();
 
     @Id
     private Long userId;
@@ -41,6 +43,7 @@ public class Authority implements GrantedAuthority {
     public String getAuthority() {
         return null;
     }
+
 }
 
 
