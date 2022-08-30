@@ -81,7 +81,6 @@ public class TeacherTest extends WithUserTest {
 
         this.userTestHelper.createUser(school, "허순희", Authority.ROLE_TEACHER);
         this.userTestHelper.createUser(school, "장용미", Authority.ROLE_TEACHER);
-
         assertEquals(3, userService.findTeacherList().size());
     }
 
