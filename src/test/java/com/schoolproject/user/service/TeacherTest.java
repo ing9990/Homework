@@ -4,7 +4,6 @@ package com.schoolproject.user.service;
  * @author Taewoo
  */
 
-
 import com.schoolproject.user.domain.Authority;
 import com.schoolproject.user.domain.User;
 import com.schoolproject.user.service.helper.UserTestHelper;
@@ -71,6 +70,19 @@ public class TeacherTest extends WithUserTest {
                         this.userTestHelper.createTeacher(school, "박성우")));
 
         assertTrue(userService.findTeacherList().containsAll(list));
+    }
+
+    @DisplayName("5. 학교로 선생님 조회")
+    @Test
+    void 학교로_선생님_조회() {
+        var teacherList = userService.findBySchoolTeacherList(school.getSchoolId());
+        assertEquals(1, teacherList.size());
+        UserTestHelper.assertTeacher(school, teacher, "teacher1");
+
+        this.userTestHelper.createUser(school, "허순희", Authority.ROLE_TEACHER);
+        this.userTestHelper.createUser(school, "장용미", Authority.ROLE_TEACHER);
+
+        assertEquals(3, userService.findTeacherList().size());
     }
 
 }
