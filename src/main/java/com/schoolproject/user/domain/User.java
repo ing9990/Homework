@@ -4,8 +4,6 @@ package com.schoolproject.user.domain;
  * @author Taewoo
  */
 
-
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.time.LocalDateTime;
@@ -55,7 +53,6 @@ public class User implements UserDetails {
     private LocalDateTime created;
 
     private LocalDateTime updated;
-
 
     @Override
     public String getPassword() {

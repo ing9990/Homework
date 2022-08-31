@@ -48,8 +48,6 @@ public class WithUserTest {
         this.schoolTestHelper = new SchoolTestHelper(schoolService);
         this.school = this.schoolTestHelper.createSchool("테스트 학교", "서울");
     }
-
-
 }
 
 

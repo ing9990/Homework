@@ -84,7 +84,6 @@ public class TeacherTest extends WithUserTest {
 
         assertEquals(3, userService.findTeacherList().size());
     }
-
 }
 
 

@@ -35,7 +35,6 @@ public class SchoolTestHelper {
         assertEquals(name, school.getName());
         assertEquals(city, school.getCity());
     }
-
 }
 
 

@@ -102,7 +102,7 @@ public class UserService {
         return userRepository.findAllByTeacherUserId(userId);
     }
 
-    public Long findTeacherStudentount(Long userId) {
+    public Long findTeacherStudentCount(Long userId) {
         return userRepository.countByAllTeacherUserId(userId);
     }
 

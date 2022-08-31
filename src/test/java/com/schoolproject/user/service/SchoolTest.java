@@ -3,7 +3,6 @@ package com.schoolproject.user.service;
 import com.schoolproject.user.domain.School;
 import com.schoolproject.user.repository.SchoolRepository;
 import com.schoolproject.user.service.helper.SchoolTestHelper;
-import lombok.RequiredArgsConstructor;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -83,14 +82,3 @@ class SchoolTest {
         assertEquals("서울2 학교", list.get(1).getName());
     }
 }
-
-
-
-
-
-
-
-
-
-
-
