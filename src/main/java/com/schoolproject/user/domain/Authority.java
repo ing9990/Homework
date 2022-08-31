@@ -39,11 +39,6 @@ public class Authority implements GrantedAuthority {
     @Id
     private String authority;
 
-    @Override
-    public String getAuthority() {
-        return null;
-    }
-
 }
 
 
