@@ -37,6 +37,9 @@ public class Paper {
     @Transient
     private User user;
 
+    // Transient --> 영속성 컨텍스트의 관리 대상 X
+    // orphanRemoval --> PK가 NULL인 컬럼은 고아로 판단하고 삭제
+
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "paper")
     private List<PaperAnswer> paperAnswerList;
 
