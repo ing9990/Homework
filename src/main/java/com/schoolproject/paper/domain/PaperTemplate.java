@@ -22,7 +22,7 @@ import javax.persistence.*;
 @Builder
 @Entity
 @Table(name = "TABLE_PAPER_TEMPLATE")
-public class PaperTemplates {
+public class PaperTemplate {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
